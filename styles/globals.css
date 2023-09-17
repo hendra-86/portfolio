@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'LittleLord';
+  src: url('../public/fonts/LittleLordFontleroyNf-KO9X.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
 html,
 body {
   padding: 0;

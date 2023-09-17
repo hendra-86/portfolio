@@ -85,9 +85,9 @@ const techStacks = [
     //     url: "https://firebase.google.com/",
     // },
     {
-        name: "Github & GitLab",
+        name: "Git",
         icon: <FaGitAlt fontSize="20px" />,
-        url: "https://www.gitlab.com/",
+        url: "https://www.git.com/",
     },
     // {
     //     name: "CI/CD - Fastlane",

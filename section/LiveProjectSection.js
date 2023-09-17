@@ -26,7 +26,7 @@ export const LiveProjectSection = ({ project }) => {
                 Project
             </Heading>
             <Text textColor={useColorModeValue("gray.600", "gray.400")} fontSize={'lg'}>
-                List of projects went live on Website.
+                Beberapa project yang telah saya buat ataupun membantu dalam proses pengembangannya.
             </Text>
 
             <SimpleGrid columns={[1, 2, 2, 2]} mt={5}>

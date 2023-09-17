@@ -38,7 +38,7 @@ function About() {
             </Head>
 
             <main>
-                <Container maxW="container.lg" mt={['5', '10']} mb={['5', '10']}>
+                <Container maxW="container.lg" mt={['20', '20']} mb={['5', '10']}>
                     <SlideFade in offsetX={80}>
                         <Box>
                             {/* <UnderlinedText>

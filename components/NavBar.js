@@ -57,7 +57,12 @@ const NavBar = () => {
 
     return (
         <>
-            <Box bg={useColorModeValue('white', 'gray.700')} px={4} boxShadow={'lg'}>
+            <Box bg={useColorModeValue('white', 'gray.700')} px={4} boxShadow={'lg'} top={0}
+                    position={'fixed'}
+                    w={"100%"}
+                    zIndex={'sticky'}
+                    >
+
                 <Flex
                     h={16}
                     alignItems={"center"}

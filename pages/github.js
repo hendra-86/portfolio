@@ -18,7 +18,7 @@ const Github = ({repos}) => {
         </Head>
 
         <main>
-            <Container maxW="container.lg" mt={['5', '10']} mb={['5', '10']}>
+            <Container maxW="container.lg" mt={['20', '20']} mb={['5', '10']}>
                 <GithubSection repos={repos}/>
             </Container>
         </main>
