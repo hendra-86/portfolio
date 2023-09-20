@@ -29,7 +29,7 @@ export const GallerySection = ({ konten }) => {
                 Desain yang telah saya buat
             </Text>
 
-            <SimpleGrid columns={[1, 2, 2, 2]} mt={5}>
+            <SimpleGrid columns={[1, 2, 3, 4]} mt={5}>
                 {gallery.map((konten) => {
                     return (
                         <GalleryCard
