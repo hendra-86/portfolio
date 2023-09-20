@@ -20,7 +20,7 @@ const ProfileSection = ({song}) => {
                         fontFamily='LittleLord'
                         fontWeight='normal'
                     >
-                        Hello, I'm Hendra
+                        Halo, Saya Hendra
                         {/* <span className="waving-hand">👋</span> */}
                     </Heading>
                     {/* <Flex alignItems={"flex-end"}>

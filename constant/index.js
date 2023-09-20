@@ -9,6 +9,7 @@ const menuLinks = [
     // { name: "Experience", route: "/experience" },
     // { name: "Projects", route: "/projects" },
     { name: 'Github', route: '/github' },
+    { name: 'Gallery', route: '/gallery' },
     // { name: 'Articles', route: '/article' },
     // { name: "Contact", route: "/contact" },
 ]
@@ -173,6 +174,54 @@ const liveProjects = [
     }
 ]
 
+const gallery = [
+    {
+        name: 'SpeedGear',
+        imageUrl: '/content/boys11.png',
+        alt: 'SpeedGear',
+    },
+    {
+        name: 'StoQu',
+        imageUrl: '/content/heart.png',
+        alt: 'StoQu',
+    },
+    {
+        name: 'Kalkulator Konversi',
+        imageUrl: '/content/introvert1.png',
+        alt: 'Kalkulatar Konversi',
+    },
+    {
+        name: 'SpeedGear',
+        imageUrl: '/content/nganjuk.png',
+        alt: 'SpeedGear',
+    },
+    {
+        name: 'StoQu',
+        imageUrl: '/content/ngatmombilung.png',
+        alt: 'StoQu',
+    },
+    {
+        name: 'Kalkulator Konversi',
+        imageUrl: '/content/obito-Recovered1.png',
+        alt: 'Kalkulatar Konversi',
+    },
+    {
+        name: 'SpeedGear',
+        imageUrl: '/content/rokok.png',
+        alt: 'SpeedGear',
+    },
+    {
+        name: 'StoQu',
+        imageUrl: '/content/sunflowers1.png',
+        alt: 'StoQu',
+    },
+    {
+        name: 'Kalkulator Konversi',
+        imageUrl: '/content/tenang.png',
+        alt: 'Kalkulatar Konversi',
+    }
+]
 
 
-export { menuLinks, techStacks, siteConfig, resume, companies, educations, liveProjects }
+
+export { menuLinks, techStacks, siteConfig, resume, companies, educations, liveProjects,gallery }
