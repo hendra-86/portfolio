@@ -8,7 +8,7 @@ const menuLinks = [
     { name: "About Me", route: "/about" },
     // { name: "Experience", route: "/experience" },
     // { name: "Projects", route: "/projects" },
-    { name: 'Github', route: '/github' },
+    // { name: 'Github', route: '/github' },
     { name: 'Gallery', route: '/gallery' },
     // { name: 'Articles', route: '/article' },
     // { name: "Contact", route: "/contact" },
@@ -19,12 +19,12 @@ const siteConfig = {
     author: {
         name: "Hendra Afrizal M.K.",
         accounts: [
-            {
-                url: "https://github.com/hendra-86",
-                icon: <FaGithub />,
-                name: "Github",
-                type: "gray"
-            },
+            // {
+            //     url: "https://github.com/hendra-86",
+            //     icon: <FaGithub />,
+            //     name: "Github",
+            //     type: "gray"
+            // },
             {
                 url: "https://www.linkedin.com/in/hendra-afrizal-muhamad-khoharudin-552023241/",
                 icon: <FaLinkedin />,
@@ -129,7 +129,7 @@ const educations = [
         alt: "utm image",
         url: 'https://www.itpln.ac.id/',
         role: "Bachelor's Degree in Computer Science (Informatics Engineering)",
-        skills: ["CGPA - 3.79", "Microsoft Office Specialist", "Microsoft Azure AI Fundamentals"],
+        skills: ["CGPA - 3.60", "Microsoft Office Specialist", "Microsoft Azure AI Fundamentals"],
         period: "Sept 2019 - Aug 2023",
         logo: '/itpln.jpg'
     },
