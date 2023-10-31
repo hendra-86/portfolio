@@ -4,6 +4,21 @@
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'YellowTail';
+  src: url('../public/fonts/Yellowtail-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Nathan';
+  src: url('../public/fonts/Nathan\ Script\ OTF.otf');
+  font-style: normal;
+  font-weight: normal;
+}
+
 html,
 body {
   padding: 0;

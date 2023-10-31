@@ -37,6 +37,8 @@ const StackCard = ({ stack }) => {
                             <Text
                                 size="sm"
                                 _hover={{ color: "blue.500" }}
+                                fontFamily='Nathan'
+                                fontWeight='normal'
                             >{stack?.name}</Text>
                         </Flex>
                     </LinkOverlay>

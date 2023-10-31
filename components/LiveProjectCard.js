@@ -41,7 +41,14 @@ export const LiveProjectCard = ({ project }) => (
                     boxSize={['100px', '150px', '150px', '150px']}
                 />
                 <Flex flexDirection="column" ml={[0, 5, 5]} mt={[5, 5, 0, 0]}>
-                    <Heading as="h2" fontSize="lg" fontWeight="600" color={"blue.400"}>
+                    <Heading 
+                        as="h2"
+                        fontSize="lg"
+                        fontWeight="600"
+                        color={"blue.400"}
+                        fontFamily='Nathan'
+                        // fontWeight='normal'
+                        >
                         {project.name}
                     </Heading>
                     <Paragraph mt={'10px'}>
