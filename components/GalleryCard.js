@@ -16,6 +16,7 @@ import { FaGooglePlay, FaAppStoreIos } from 'react-icons/fa';
 const MotionBox = motion(Box);
 
 export const GalleryCard = ({ konten }) => (
+    
     <MotionBox whileHover={{ y: -5 }}>
         <Box
             p={4}
@@ -39,8 +40,10 @@ export const GalleryCard = ({ konten }) => (
                     objectFit={'cover'}
                     boxSize={['200px', '200px', '200px', '200px']}
                 />
+                
             {/* </Flex> */}
+            
         </Box>
     </MotionBox>
-
+    
 )

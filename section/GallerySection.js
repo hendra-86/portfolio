@@ -38,7 +38,9 @@ export const GallerySection = ({ konten }) => {
                         />
                     );
                 })}
+
             </SimpleGrid>
         </SlideFade>
+        
     )
 }
