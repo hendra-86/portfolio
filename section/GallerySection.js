@@ -22,6 +22,7 @@ export const GallerySection = ({ konten }) => {
                 as="h1"
                 fontSize={{ base: "24px", md: "30px", lg: "36px" }}
                 mb={3}
+                fontFamily='Nathan'
             >
                 Gallery
             </Heading>

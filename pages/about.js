@@ -67,7 +67,7 @@ function About() {
                                             <BsFillBriefcaseFill size={'30px'} />
                                         </Stack>
 
-                                        <Heading>Career</Heading>
+                                        <Heading fontFamily='Nathan' fontSize={{ base: "24px", md: "30px", lg: "36px" }}>Career</Heading>
                                     </Flex>
                                 </UnderlinedText>
                             </Flex>
@@ -95,7 +95,7 @@ function About() {
                                         <Stack pr={3}>
                                             <FaGraduationCap size={'30px'} />
                                         </Stack>
-                                        <Heading>Education</Heading>
+                                        <Heading fontFamily='Nathan' fontSize={{ base: "24px", md: "30px", lg: "36px" }}>Education</Heading>
 
                                     </Flex>
 
