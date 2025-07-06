@@ -11,6 +11,7 @@ export default async (req, res) => {
     const { resources } = await cloudinary.v2.api.resources({
       type: 'upload',
       prefix: 'galery/', // Ganti dengan nama folder Anda
+      max_results: 100,
     });
 
     const images = resources.map((resource) => ({
