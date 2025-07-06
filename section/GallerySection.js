@@ -2,20 +2,12 @@ import React from 'react';
 import {
     Heading,
     SlideFade,
-    Box,
     Text,
-    Image,
-    Stack,
-    Flex,
-    Button,
-    useColorModeValue,
-    SimpleGrid
+    SimpleGrid,
 } from "@chakra-ui/react";
-import StackCard from '../components/StackCard';
-import { gallery, techStacks } from '../constant';
 import { GalleryCard } from '../components/GalleryCard';
 
-export const GallerySection = ({ konten }) => {
+export const GallerySection = ({ images }) => {
     return (
         <SlideFade in offsetY={80} delay={0.2}>
             <Heading
@@ -26,22 +18,18 @@ export const GallerySection = ({ konten }) => {
             >
                 Gallery
             </Heading>
-            <Text textColor={useColorModeValue("gray.600", "gray.400")} fontSize={'lg'}>
+            <Text fontSize={'lg'}>
                 Desain yang telah saya buat
             </Text>
 
             <SimpleGrid columns={[1, 2, 3, 4]} mt={5}>
-                {gallery.map((konten) => {
-                    return (
-                        <GalleryCard
-                            key={konten.name}
-                            konten={konten}
-                        />
-                    );
-                })}
-
+                {images.map((konten) => (
+                    <GalleryCard
+                        key={konten.public_id} // Menggunakan public_id sebagai key
+                        konten={konten}
+                    />
+                ))}
             </SimpleGrid>
         </SlideFade>
-        
-    )
-}
+    );
+};
