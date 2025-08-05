@@ -12,10 +12,10 @@ import React from 'react';
 
 export default function Home() {
 
-  const fetcher = (url) => fetch(url).then((r) => r.json());
-  const { data } = useSWR('/api/spotify', fetcher);
+  // const fetcher = (url) => fetch(url).then((r) => r.json());
+  // const { data } = useSWR('/api/spotify', fetcher);
 
-  console.log({data});
+  // console.log({data});
 
   return (
     <div className={styles.container}>

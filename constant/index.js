@@ -103,10 +103,19 @@ const techStacks = [
 ]
 
 const companies = [
+    {   
+        title: "PLN Icon Plus",
+        alt: "PLN Icon Plus image",
+        url: 'https://plniconplus.co.id/',
+        role: "Software Quality Assurance",
+        skills: ["Postman", "Insomnia", "JMeter", "SNAPBI","Jira", "Confluence", "SQL"],
+        period: "Nov 2023 - Now",
+        logo: 'https://plniconplus.co.id/assets/logo-pln-plus.png'
+    },
     {
         title: "Sagara Tecnology",
-        alt: "qumon image",
-        url: 'https://www.qumonintelligence.com/',
+        alt: "Sagara Tecnology image",
+        url: 'https://sagaratechnology.com/',
         role: "Frontend Developer Intern",
         skills: ["Javascript", "Chakra-UI", "Framer Motion", "Ether.js", "Next.js"],
         period: "Aug 2022 - Nov 2022",
@@ -114,8 +123,8 @@ const companies = [
     },
     {
         title: "Institut Teknologi PLN",
-        alt: "timetec image",
-        url: "https://www.timeteccloud.com/",
+        alt: "Institut Teknologi PLN image",
+        url: "https://www.itpln.ac.id/",
         role: "Computer Lab Assistant",
         skills: ["Java", "Python", "Ms. Office", "Design", "PHP","Javascript","HTML","CSS", "SPSS"],
         period: "Sep 2020 - Jan 2023",
@@ -126,7 +135,7 @@ const companies = [
 const educations = [
     {
         title: "Institut Teknologi PLN",
-        alt: "utm image",
+        alt: "Institut Teknologi PLN image",
         url: 'https://www.itpln.ac.id/',
         role: "Bachelor's Degree in Computer Science (Informatics Engineering)",
         skills: ["CGPA - 3.60", "Microsoft Office Specialist", "Microsoft Azure AI Fundamentals"],
