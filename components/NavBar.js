@@ -1,117 +1,105 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 import {
-    Text,
-    Container,
-    Flex,
-    IconButton,
-    HStack,
-    Box,
-    Button,
-    Stack,
-    Link as CharkaLink,
-    useColorModeValue,
-    Avatar
+  Flex,
+  IconButton,
+  HStack,
+  Box,
+  Stack,
+  Link as ChakraLink,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 import { useDisclosure } from '@chakra-ui/hooks';
-import { useColorMode } from '@chakra-ui/color-mode';
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { menuLinks } from '../constant';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 const NavBar = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { asPath } = useRouter();
 
-    const { isOpen, onOpen, onClose } = useDisclosure();
+  const hoverBg = useColorModeValue('gray.200', 'gray.900');
+  const activeColor = useColorModeValue('blue.500', 'blue.300');
+  const bgColor = useColorModeValue('white', 'gray.700');
 
-    let router = useRouter();
-    let { asPath } = router;
+  const links = Array.isArray(menuLinks) ? menuLinks : [];
 
-    const navItem = (
-        <>
-            {menuLinks.map((link) => (
-                <NextLink
-                    href={link.route}
-                    key={link.name}
-                    passHref
-                >
-                    <CharkaLink
-                        href={link.route}
-                        px={2}
-                        py={1}
-                        rounded={"md"}
-                        _hover={{
-                            textDecoration: "none",
-                            bg: useColorModeValue("gray.200", "gray.900")
-                        }}
-                        color={link.route === asPath && useColorModeValue("blue.500", "blue.300")}
-                        onClick={isOpen ? onClose : onOpen}
-                    >
-                        {link.name}
-                    </CharkaLink>
-                </NextLink>
-            ))}
-        </>
-    )
-
-    return (
-        <>
-            <Box bg={useColorModeValue('white', 'gray.700')} px={4} boxShadow={'lg'} top={0}
-                    position={'fixed'}
-                    w={"100%"}
-                    zIndex={'sticky'}
-                    >
-
-                <Flex
-                    h={16}
-                    alignItems={"center"}
-                    justifyContent={"space-between"}
-                    w={["95%", "95%", "95%"]}
-                    maxW={'container.lg'}
-                    mx="auto"
-                >
-                    <IconButton
-                        size={"md"}
-                        icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-                        aria-label={"Open Menu"}
-                        display={["inherit", "inherit", "none"]}
-                        onClick={isOpen ? onClose : onOpen}
-                    />
-                    <HStack spacing={8} alignItems={'center'}>
-                        {/* <Avatar
-                            as={CharkaLink}
-                            size='sm'
-                            href="/"
-                            src="/handjock.png"
-                            _hover={{ borderColor: "blue.500" }}
-                        /> */}
-                        <HStack as="nav" spacing="4" display={{ base: 'none', md: 'flex' }}>
-                            {navItem}
-                        </HStack>
-                    </HStack>
-                    <Flex alignItems={"center"}>
-                        <ColorModeSwitcher justifySelf="flex-end" />
-                    </Flex>
-                </Flex>
+  const navItem = (
+    <>
+        {links.map((link) => (
+        <ChakraLink
+            as={NextLink}
+            href={link.route}
+            key={link.name}
+            px={2}
+            py={1}
+            rounded="md"
+            _hover={{
+            textDecoration: "none",
+            bg: useColorModeValue("gray.200", "gray.900"),
+            }}
+            color={
+            link.route === asPath
+                ? useColorModeValue("blue.500", "blue.300")
+                : "inherit"
+            }
+            onClick={() => {
+            if (isOpen) onClose();
+            }}
+        >
+            {link.name}
+        </ChakraLink>
+        ))}
+    </>
+    );
 
 
-                {isOpen && (
-                    <Box
-                        pb={4}
-                        w={["100%", "100%", "80%"]}
-                        maxW={'container.lg'}
-                        display={["inherit", "inherit", "none"]}
-                    >
-                        <Stack as={"nav"} spacing={4}>
-                            {navItem}
-                        </Stack>
-                    </Box>
-                )}
+  return (
+    <Box
+      bg={bgColor}
+      px={4}
+      boxShadow="lg"
+      position="fixed"
+      top={0}
+      w="100%"
+      zIndex="sticky"
+    >
+      <Flex
+        h={16}
+        alignItems="center"
+        justifyContent="space-between"
+        maxW="container.lg"
+        mx="auto"
+      >
+        <IconButton
+          size="md"
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          aria-label="Open Menu"
+          display={{ base: 'flex', md: 'none' }}
+          onClick={isOpen ? onClose : onOpen}
+        />
 
-            </Box>
-        </>
-    )
-}
+        <HStack spacing={8} alignItems="center">
+          <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
+            {navItem}
+          </HStack>
+        </HStack>
 
-export default NavBar
+        <Flex alignItems="center">
+          <ColorModeSwitcher />
+        </Flex>
+      </Flex>
+
+      {isOpen && (
+        <Box pb={4} display={{ md: 'none' }}>
+          <Stack as="nav" spacing={4}>
+            {navItem}
+          </Stack>
+        </Box>
+      )}
+    </Box>
+  );
+};
+
+export default NavBar;
